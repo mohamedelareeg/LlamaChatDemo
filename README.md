@@ -9,28 +9,6 @@ Watch the demo Video:
 
 This project sets up a web application where users can interact with the Llama 3.1 model via a simple chat interface. The chat interface uses JavaScript and asynchronous API calls to send messages to the Llama inference server and display responses.
 
-## Getting Started
-
-### Using the Chat Interface
-
-You can interact with the Llama model through the provided web interface. Here's how you can send a message to the model:
-
-1. **Enter your message** in the textarea and click the send button or press Enter.
-2. The message will be sent to the Llama API and a response will be displayed in the chat window.
-
-### Accessing the API Using cURL
-
-You can also interact with the Llama inference server using cURL. Below is an example command to send a message to the Llama model:
-
-```bash
-curl http://localhost:11434/api/chat -d '{
-    "model": "llama3.1:8b",
-    "messages": [
-        { "role": "user", "content": "What are God Particles?" }
-    ],
-    "stream": false
-}'
-```
 
 ## Installation Guide
 
@@ -77,6 +55,27 @@ curl http://localhost:11434/api/chat -d '{
 
 - **Access the API**
   - Once the model is running, you can access the API at `http://localhost:11434/api/chat` and start interacting with it using the provided cURL commands or through your application.
+
+### Using the Chat Interface
+
+You can interact with the Llama model through the provided web interface. Here's how you can send a message to the model:
+
+1. **Enter your message** in the textarea and click the send button or press Enter.
+2. The message will be sent to the Llama API and a response will be displayed in the chat window.
+
+### Accessing the API Using cURL
+
+You can also interact with the Llama inference server using cURL. Below is an example command to send a message to the Llama model:
+
+```bash
+curl http://localhost:11434/api/chat -d '{
+    "model": "llama3.1:8b",
+    "messages": [
+        { "role": "user", "content": "What are God Particles?" }
+    ],
+    "stream": false
+}'
+```
 
 For any issues or additional support, refer to the [Ollama documentation](https://ollama.com/docs) or open an issue on the GitHub repository.
 ### Explanation of Parameters (continued):
