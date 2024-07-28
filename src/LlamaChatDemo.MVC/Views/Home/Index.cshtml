@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+
+
+<div class="row">
+    <div class="conversation disable-scrollbars">
+        <div class="stop_generating stop_generating-hidden">
+            <button id="cancelButton">
+                <span>Stop Generating</span>
+                <i class="fa-regular fa-stop"></i>
+            </button>
+        </div>
+        <div class="box" id="messages"></div>
+        <div class="user-input">
+            <div class="box input-box">
+                <textarea id="message-input" placeholder="Ask a question" cols="30" rows="10" style="white-space: pre-wrap;" oninput="resizeTextarea(this)"></textarea>
+                <div id="send-button">
+                    <i class="fa-regular fa-paper-plane-top"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+<script>
+    const user_image = `<img src="/assets/img/user.png" alt="User Avatar">`;
+    const gpt_image = `<img src="/assets/img/gpt.png" alt="GPT Avatar">`;
+</script>
+
+<script src="~/assets/js/utils.js" defer></script>
+<script src="~/assets/js/domutils.js" defer></script>
+<script src="~/assets/js/formatting.js" defer></script>
+<script src="~/assets/js/api.js" defer></script>
+<script src="~/assets/js/events.js" defer></script>
