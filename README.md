@@ -1,5 +1,5 @@
 # llama3.1
-Watch the demo Viedo:
+Watch the demo Video:
 
 
 
